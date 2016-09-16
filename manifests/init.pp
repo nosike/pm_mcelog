@@ -3,7 +3,7 @@
 class pm_mcelog {
 $mce_package = 'mcelog'
 
-if $mcelog_exist == 'false' {
+if $mcelog_exists == 1 {
   fail("Package is already absent. Unpin node from node group.")
 }
 case $::osfamily {
