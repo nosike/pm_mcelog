@@ -17,7 +17,7 @@ package { 'mcelog':
   ensure => 'absent',
 }
 }
-else {
-fail("Operating system type is not supported")
-}
+#else {
+#fail("Operating system type is not supported")
+#}
 }
