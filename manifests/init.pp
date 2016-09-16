@@ -1,9 +1,9 @@
 ## The aim of this modules is to remove mcelog package in all Rhel servers.
 
 class pm_mcelog {
-$mce_package = 'mcelog'
+#$mce_package = 'mcelog'
 
-if $mce_package != 'installed' {
+if $mcelog != 'installed' {
   warning("Package is already absent. Unpin node from node group.")
 }else {
 
