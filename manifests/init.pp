@@ -4,7 +4,7 @@ class pm_mcelog {
 $mce_package = 'mcelog'
 
 if $mcelog_exist == 'false' {
-  warning("Package is already absent. Unpin node from node group.")
+  fail("Package is already absent. Unpin node from node group.")
 }
 case $::osfamily {
   'Windows':{
