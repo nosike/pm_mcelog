@@ -5,7 +5,7 @@ $mce_package = 'mcelog'
 
 if $mce_package == 'absent' {
   warning("Package is already absent. Unpin node from node group.")
-}
+}else {
 
 case $::osfamily {
   'Windows':{
@@ -15,6 +15,7 @@ case $::osfamily {
 package { 'mcelog':
   ensure => 'absent',
 
+}
 }
 }
 }
