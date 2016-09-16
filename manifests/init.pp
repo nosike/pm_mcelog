@@ -18,6 +18,6 @@ package { 'mcelog':
 }
 }
 else {
-fail("OS type is not supported.")
+fail("Operating system type is not supported")
 }
 }
