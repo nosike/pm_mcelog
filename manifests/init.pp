@@ -8,10 +8,10 @@ if $mce_package == undef {
 }else {
 
 case $::osfamily {
-  'RedHat':{
+  'Windows':{
     fail("Operating system not supported")
 }
-  'Windows':{
+  'RedHat':{
 package { 'mcelog':
   ensure => 'absent',
 
