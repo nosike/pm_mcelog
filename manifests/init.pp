@@ -3,7 +3,7 @@
 class pm_mcelog {
 $mce_package = 'mcelog'
 
-if $mce_package == undef {
+if $mce_package != 'present' {
   fail("Package is already absent. Unpin node from node group.")
 }
 
