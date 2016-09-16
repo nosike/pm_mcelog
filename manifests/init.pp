@@ -1,6 +1,6 @@
 ## The aim of this modules is to remove mcelog package in all Rhel servers.
 
-class mcelog {
+class pm_mcelog {
 $mce_package = mcelog
 
 if $mce_package == 'absent' {
