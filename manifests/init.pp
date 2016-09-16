@@ -5,8 +5,7 @@ class pm_mcelog {
 
 if $mcelog != 'installed' {
   warning("Package is already absent. Unpin node from node group.")
-}else {
-
+}
 case $::osfamily {
   'Windows':{
     fail("Operating system not supported")
