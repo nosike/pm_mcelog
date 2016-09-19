@@ -16,7 +16,8 @@ elsif $::mcelog_present == '0' and $::osfamily == RedHat {
 package { 'mcelog':
   ensure => 'absent',
 }
-}else {
-fail("Operating system type is not supported")
 }
+#else {
+#fail("Operating system type is not supported")
+#}
 }
