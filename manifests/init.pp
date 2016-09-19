@@ -2,7 +2,7 @@
 
 class pm_mcelog {
 $mcelog_present = mcelog_exists("/usr/sbin/mcelog")
-
+  notify{ "Check File = $mcelog_present" : }
 #if $mcelog_exists == 1 {
 #  fail("Package is already absent. Unpin node from node group.")
 #}
