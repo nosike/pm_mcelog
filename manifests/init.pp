@@ -9,10 +9,10 @@ class pm_mcelog {
 #if $::osfamily == 'Windows' {
  #   fail("Operating system not supported")
 #}
-if $/usr/sbin/mcelog == 0 and $::osfamily == 'RedHat' {
+if $/usr/sbin/mcelog == absent and $::osfamily == 'RedHat' {
   fail("Package is already absent. Unpin node from node group.")
 }
-elsif $/usr/sbin/mcelog == 1 and $::osfamily == RedHat {
+elsif $/usr/sbin/mcelog == present and $::osfamily == RedHat {
 package { 'mcelog':
   ensure => 'absent',
 }
